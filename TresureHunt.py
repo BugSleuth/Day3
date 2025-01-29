@@ -22,16 +22,19 @@ ____/______/______/______/______/_____"=.o|o_.--""___/______/______/______/____
 ''')
 print("Welcome to Treasure Island.")
 print("Your mission is to find the treasure.")
-direction=input("Where you want to Go Left or Right?\n")
-if direction== "Left" or direction== "left":
-    decision = input("You are at the Lake Do You want tot swim or wait?")
-    if decision== "wait" or decision== "Wait":
-        door = input("Which Door you want to choose Red,Yellow,Blue?")
-        if door== "Red" or door== "red":
+#Taking Input from the User For Direction. and convert to lower case.
+direction = input("Where you want to Go Type Left or Right?\n").lower()
+if  direction == "left":
+    #Taking Input from  the User for Decision and Convert it to lower case. To Remove redudent code for 'Or'logical operator.
+    decision = input("You are at the Lake Do You want to swim or wait?").lower()
+    if decision == "wait":
+        #Taking input for Door and converting it to lower case as well.
+        door = input("Which Door you want to choose Red,Yellow,Blue?").lower()
+        if  door == "red":
             print("Burned By Fire. Game Over")
-        elif door== "Yellow" or door== "yellow":
+        elif door == "Yellow" or door == "yellow":
             print("You win!")
-        elif door== "Blue"or door== "blue":
+        elif door == "Blue" or door == "blue":
             print("Eaten by Beasts Game Over")
         else:
             print("Game Over.")
